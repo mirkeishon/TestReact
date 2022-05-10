@@ -1,0 +1,110 @@
+/* Provide sufficient contrast against white background */
+:root{
+    --background: #ffffff;
+    --buttonBackground: #cc0000;
+    --buttonText: #ffffff;
+    --inputSectionBackground: #cecece;
+    --inputSectionText: #2f4f4f;
+    --outputSectionBackground: #ffffff;
+    --outputSectionText: #000000;
+}
+
+.dark {
+    --background: #000000;
+    --buttonBackground: #f0f8ff;
+    --buttonText: #800080;
+    --inputSectionBackground: #ffffff;
+    --inputSectionText: #696969;
+    --outputSectionBackground: #008080;
+    --outputSectionText: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+body{
+    min-height: 100vh;
+}
+
+#root{
+    min-height: 100vh;
+    background-color: var(--background)
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    color: var(--outputSectionText)
+}
+
+.container{
+    display: flex;
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px;
+}
+
+.container-input{
+    background-color: var(--inputSectionBackground);
+    color: var(--inputSectionText);
+    width: 60%;
+    padding: 20px;
+    max-height: 700px;
+    overflow: auto;
+}
+
+.container-input button{
+    color: var(--buttonText);
+    background-color: var(--buttonBackground);
+    padding: 5px;
+    margin: 5px 0;
+    border: none;
+    max-height: 30px;
+    cursor: pointer;
+}
+
+.textArea{
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 0;
+}
+
+.textArea textarea{
+   padding: 5px;
+   margin-right: 5px;
+   border: none;
+   height: 100%;
+   background-color: var(--outputSectionBackground);
+   color: var(--outputSectionText)
+}
+
+.container-output {
+    background-color: var(--outputSectionBackground);
+    color: var(--outputSectionText);
+    width: 40%;
+    padding: 20px;
+    max-height: 700px;
+    overflow: auto;
+    overflow-wrap: anywhere;
+
+}
+
+.container-output div{
+    width: 100%
+}
+
+.output-date{
+    white-space:nowrap;
+}
+
+.container-output div p{
+    padding: 5px 10px 5px 10px;
+}
